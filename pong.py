@@ -21,8 +21,20 @@ class PlayerPaddle(Widget):
 class PongGame(Widget):
     ball = ObjectProperty(None)
 
+    def on_touch_down(self, touch):
+
+        if touch.x < self.width /2:
+            self.player1.center_y = touch.y
+        if touch.x > self.width /2:
+            self.player2.center_y = touch.y
+
+
     def update(self, delta_time):
         self.ball.move()
+
+        #Kollisionskontrolle für die Spielerbalken
+        if self.ball.collide_widget(self.player1)or self.ball.collide_widget(self.player2):
+            self.ball.velocity_x *=-1
 
         #Abfrage für Spielrand Oben/Unten
         if(self.ball.y <0)or(self.ball.top > self.height):
