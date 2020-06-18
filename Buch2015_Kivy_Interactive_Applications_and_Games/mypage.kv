@@ -1,0 +1,71 @@
+#:kivy 1.11.1
+
+<Layout>:
+    canvas:
+        Color:
+            rgba: 1,1,1,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+<MyPageLayout>:
+    page: 3
+    border: 120
+    swipe_threshold: .4
+    FloatLayout:
+        Button:
+            text: "Float"
+            size_hint: .3,.3
+            pos: 0,0
+    RelativeLayout:
+        Button:
+            text: "Relative"
+            size_hint: .3,.3
+            pos: 0,0
+    GridLayout:
+        cols: 2
+        spacing: 10
+        Button:
+            text: "Grid1"
+            size_hint_x: None
+            width: 50
+        Button:
+            text: "Grid2"
+        Button:
+            text: "Grid3"
+            size_hint_x: None
+            width: 50
+    AnchorLayout:
+        anchor_x: "right"
+        anchor_y: "top"
+        Button:
+            text: "Anchor 1"
+            size_hint: .5,.5
+        Button:
+            text: "Anchor 2"
+            size_hint: .2,.2
+
+    BoxLayout:
+        orientation: "horizontal"
+        Button:
+            text: "Box 1"
+        Button:
+            text: "Box 2"
+            size_hint: 2,.3
+            pos_hint: {"y": .6}
+        Button:
+            text: "Box 3"
+    StackLayout:
+        orientation: "rl-tb"
+        padding: 10
+        Button:
+            text: "Stack 1"
+            size_hint: .6,.2
+        Button:
+            text: "Stack 2"
+            size_hint: .4,.4
+        Button:
+            text: "Stack 3"
+            size_hint: .3,.2
+        Button:
+            text: "Stack 4"
+            size_hint: .4,.3
