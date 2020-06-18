@@ -1,0 +1,53 @@
+#:kivy 1.11.1
+
+<FloatLayout>:
+    cols: 1
+
+    Image:
+        source: "CaBoo.png"
+        size_hint: .3,.3
+        pos_hint: {"center_x":0.5, "top":0.95}
+
+
+    #Label:
+    #    text: "Username: "
+    #   size_hint: .2,.1
+    #    pos_hint: {"center_x":0.36, "center_y": 0.62}
+    #    font_size: 18
+
+    TextInput:
+        id: input_username
+        size_hint: .4,.07
+        hint_text: "E-Mail"
+        halign: "center"
+        pos_hint: {"center_x":0.5, "center_y":0.55}
+        font_size: 20
+
+    #Label:
+    #    text: "Password: "
+    #    size_hint: .2,.1
+    #    pos_hint: {"center_x":0.36, "center_y": 0.5}
+    #    font_size: 18
+
+    TextInput:
+        id: input_pass
+        size_hint: .4,.07
+        hint_text: "Password"
+        halign: "center"
+        pos_hint: {"center_x":0.5,"center_y":0.45}
+        font_size: 20
+
+    Button:
+        id: btn_login
+        text: "Login"
+        size_hint: .3,.1
+        pos_hint: {"center_x":0.5, "center_y": 0.3}
+
+    Label:
+        id: lab_register
+        text: "Register your Account"
+        underline: True
+        color: 0,0,1,1
+        font_size: 14
+        size_hint: .3,.05
+        pos_hint: {"center_x":0.5,"center_y":0.22}
