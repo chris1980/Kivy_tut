@@ -3,7 +3,7 @@ from kivy.core.window import Window
 from kivy.uix.relativelayout import RelativeLayout
 
 class ZeichenBrett(RelativeLayout):
-	Window.size = (500, 200)
+	Window.size = (500, 300)
 	pass
 
 class ZeichnenApp(App):
@@ -11,5 +11,4 @@ class ZeichnenApp(App):
 		return ZeichenBrett()
 
 if __name__ == "__main__":
-	zeichnen = ZeichnenApp()
-	zeichnen.run()
+	ZeichnenApp().run()
