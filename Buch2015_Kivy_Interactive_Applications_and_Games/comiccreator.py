@@ -10,6 +10,7 @@ Builder.load_file("toolbox.kv")
 Builder.load_file("zeichenbrett.kv")
 Builder.load_file("optionen.kv")
 Builder.load_file("statusbar.kv")
+Builder.load_file("comicwidgets.kv")
 
 class ComicCreator(AnchorLayout):
 	pass

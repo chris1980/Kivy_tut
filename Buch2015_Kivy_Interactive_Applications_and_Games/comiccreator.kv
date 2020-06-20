@@ -6,12 +6,18 @@
         anchor_y: "top"
         ToolBox:
             id: tool_box
+            drawing_space: _drawing_space
+            comic_creator: root
             size_hint: None, None
             width: 100
     AnchorLayout:
         anchor_x: "right"
         anchor_y: "top"
         ZeichenBrett:
+            id: _drawing_space
+            status_bar: status_bar
+            general_options: optionen
+            tool_box: tool_box
             size_hint: None, None
             width: root.width - tool_box.width
             height: root.height - optionen.height - status_bar.height
@@ -22,6 +28,8 @@
             orientation: "vertical"
             GeneralOptions:
                 id: optionen
+                drawing_space: _drawing_space
+                comic_creator: root
                 size_hint: 1,None
                 height: 48
             StatusBar:
