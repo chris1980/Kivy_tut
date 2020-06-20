@@ -1,14 +1,12 @@
 #:kivy 1.11.1
 
 <ZeichenBrett@RelativeLayout>:
-    Label:
+    #Label:
         #markup: True
         #text: "[size=32px][color=#3e6643]The[/color][sub]Comic[/sub][i][b]Creator[/b][/i][/size]"
-    StickMan:
-        pos_hint:{"center_x":.5,"center_y":.5}
-        canvas.before:
-            Translate:
-                xy: -self.width/2, -self.height/2
-            Scale:
-                xyz: 2,2,0
+    pos_hint:{"center_x":.5,"center_y":.5}
+    canvas.before:
+        Line:
+            rectangle: 0,0,self.width - 4, self.height -4
+
     StickMan:
