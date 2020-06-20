@@ -1,6 +1,6 @@
 #Author: 			Christian Sannemann
 #Erstellt am:		18.06.2020
-#Geändert am: 		18.06.2020
+#Geändert am: 		20.06.2020
 
 from kivy.app import App
 from kivy.lang import Builder
