@@ -7,7 +7,7 @@ import kivy
 import math
 from kivy.uix.togglebutton import ToggleButton
 from kivy.graphics import Line
-#from comicwidgets import StickMan, BeweglichesWidget
+from comicwidgets import StickMan, BeweglichesWidget
 
 
 class ToolButton(ToggleButton):
